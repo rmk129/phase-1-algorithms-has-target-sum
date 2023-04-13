@@ -1,13 +1,28 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for( let i = 0; i < array.length; i++){
+       for( let j = i + 1; j < array.length; j++){
+
+        if (array[i] + array[j] === target){
+          console.log("These are the numbers that return true: ",array[i], array[j]);
+          return true;
+        }
+       }
+  }
+ return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n*n)
 */
 
 /* 
   Add your pseudocode here
+  write a function that takes 2 arguement, an array of integers, and a target integer. 
+  function should return true if any pair of integers in the array adds up to the target integer
+  use 2 for loops. 1 for the first number being added. the second for the other numbers being iterated through the array
+
 */
 
 /*
